@@ -64,3 +64,7 @@ npm run build
 
 Use **Sign in** and choose Customer, Provider or Admin. The prototype stores data in browser localStorage.
 
+
+## Production API scaffold
+
+A small serverless API boundary is included under /api, with frontend access helpers in src/lib/api.js. See docs/ARCHITECTURE.md before connecting authentication, database, media storage or live payments.
