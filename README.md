@@ -2,23 +2,65 @@
 
 JARK Market is a Kenya-first marketplace for discovering trusted service providers, creators, artisans and professionals.
 
-## Current build
-- Responsive React + Vite frontend
-- Search and category filtering
-- Service discovery cards
-- Shortlist/cart interaction
-- Seller call-to-action
-- Mobile navigation
-- JARK futuristic marketplace visual system
+## Build status
 
-## Next phases
-1. Authentication and user profiles
-2. Provider onboarding and listings
-3. Product/service detail pages
-4. Payments and order/booking flow
-5. Reviews, messaging and notifications
-6. Admin dashboard
-7. Database + API
-8. Production deployment
+This repository is being built as a real marketplace prototype in phased Git commits.
 
-Run locally with `npm install && npm run dev`.
+### Phase 1 — Marketplace foundation
+- Responsive JARK Market visual system
+- Home / landing page
+- Search and category discovery
+- Marketplace listing cards
+
+### Phase 2 — Accounts & provider onboarding
+- Customer, provider and admin roles
+- Browser-persisted demo account state
+- Provider workspace
+- Provider listing creation
+- Customer profile area
+
+### Phase 3 — Marketplace engine
+- Explore page with filters and sorting
+- Service detail pages
+- Favorites
+- Shortlist/cart
+- Orders
+- Messaging workspace
+- Review-ready listing data
+
+### Phase 4 — Payments
+- Checkout
+- M-Pesa, card and pay-on-arrangement selectors
+- Demo transaction state
+- Order confirmation
+- Production payment adapter boundary
+
+### Phase 5 — Operations
+- Admin control center
+- Marketplace health indicators
+- Order monitoring
+- Provider/listing operations foundation
+- Notification counter
+
+### Phase 6 — Production hardening
+The current build keeps business logic behind a small local store so a real backend can replace it without rebuilding the UI.
+
+Production work that still requires connected infrastructure includes authentication, database, media storage, server-side authorization, live M-Pesa/card payments, notifications, analytics, moderation and secrets.
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Production build:
+
+```bash
+npm run build
+```
+
+## Demo accounts
+
+Use **Sign in** and choose Customer, Provider or Admin. The prototype stores data in browser localStorage.
+
