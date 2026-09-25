@@ -106,9 +106,9 @@ drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created after insert on auth.users for each row execute procedure public.handle_new_user();
 
 -- Safe public view: no email, phone or other private fields.
-create or replace view public.provider_public_profiles
-with (security_invoker=true)
-as select id,name,avatar_url,bio,location,verified
+drop view if exists public.provider_public_profiles;
+create view public.provider_public_profiles as
+select id,name,avatar_url,bio,location,verified
 from public.profiles
 where role='provider';
 
